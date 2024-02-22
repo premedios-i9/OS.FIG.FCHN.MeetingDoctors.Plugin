@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-meetingdoctors" version="1.0"
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>MeetingDoctors Plugin</name>
+    <js-module name="MeetingDoctors" src="www/MeetingDoctorsPlugin.js">
+        <clobbers target="cordova.plugins.MeetingDoctors" />
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="MeetingDoctors">
+                <param name="android-package" value="com.fidelidade.MeetingDoctorsPlugin"/>
+            </feature>
+        </config-file>
+
+        <framework src="src/android/meetingdoctorsDeps.gradle" custom="true" type="gradleReference"/>
+        <source-file src="src/android/MeetingDoctorsPlugin.kt" target-dir="java/com/fidelidade/MeetingDoctorsPlugin" />
+    </platform>
+    <platform name="ios">
+    </platform>
+</plugin>
