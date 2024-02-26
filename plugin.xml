@@ -4,17 +4,17 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
     <name>MeetingDoctors Plugin</name>
     <js-module name="MeetingDoctors" src="www/MeetingDoctorsPlugin.js">
-        <clobbers target="cordova.plugins.MeetingDoctors" />
+        <clobbers target="cordova.plugins.meetingdoctors" />
     </js-module>
     <platform name="android">
         <config-file parent="/*" target="res/xml/config.xml">
             <feature name="MeetingDoctors">
-                <param name="android-package" value="com.fidelidade.MeetingDoctorsPlugin"/>
+                <param name="android-package" value="com.fidelidade.meetingdoctors.Plugin"/>
             </feature>
         </config-file>
 
         <framework src="src/android/meetingdoctorsDeps.gradle" custom="true" type="gradleReference"/>
-        <source-file src="src/android/MeetingDoctorsPlugin.kt" target-dir="java/com/fidelidade/MeetingDoctorsPlugin" />
+        <source-file src="src/android/MeetingDoctorsPlugin.kt" target-dir="java/com/fidelidade/meetingdoctors" />
     </platform>
     <platform name="ios">
     </platform>
